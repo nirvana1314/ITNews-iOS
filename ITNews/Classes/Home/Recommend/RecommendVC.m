@@ -139,6 +139,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     DetailVC *vc = [DetailVC new];
+    ListModel *model = self.dataSource[indexPath.row];
+    vc.cid = model.cid;
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end

@@ -34,7 +34,7 @@
     
     if (httpMethod == INHttpMethodPost) {
         
-        [manager POST:url parameters:param progress:nil success:^(NSURLSessionDataTask *task, NSData *data) {
+        [manager POST:url parameters:params progress:nil success:^(NSURLSessionDataTask *task, NSData *data) {
             NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             if (jsonDict == nil) {
                 NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailVC : UIViewController
-
+@property (nonatomic, copy) NSString *cid;
 @end
